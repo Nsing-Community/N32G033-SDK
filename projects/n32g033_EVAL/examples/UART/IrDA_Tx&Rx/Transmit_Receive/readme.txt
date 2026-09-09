@@ -1,0 +1,84 @@
+1、功能说明
+
+    该测例演示了UARTy与UARTz间实现串行IrDA正常模式红外解码功能的基础通信。
+    首先，UARTy发送TxBuffer1数据至UARTz，UARTz通过中断接收数据存至RxBuffer1。
+    随后，比较接收数据与发送数据，比较结果存入TransferStatus变量。
+
+
+2、使用环境
+
+    软件开发环境：KEIL MDK-ARM V5.34.0.0
+                  IAR EWARM 8.50.1
+    硬件开发环境：
+            基于评估板N32G033K8Q7-1_STB V1.0开发
+
+
+3、使用说明
+
+    系统时钟配置如下：
+    - 系统时钟 = 64MHz
+    
+    UART配置如下：
+    - 波特率 = 1200 baud
+    - 字长 = 8数据位
+    - 1停止位
+    - 校验控制禁用
+    - 接收器和发送器使能
+    - 16倍过采样
+    - IrDA模式使能
+    
+    UART引脚连接如下：    
+    - UART1_Tx.PA2    <------->   IrDA Transmitter
+    - UART2_Rx.PA0    <------->   IrDA Receiver
+    
+    - GPIO.PB4         <------->   38kHz carrier
+
+    
+    测试步骤与现象：
+    - 复位运行MCU，查看变量TransferStatus，其中，PASSED为测试通过，FAILED为测试异常
+
+
+4、注意事项
+
+
+1. Function description
+
+    This test example demonstrates the basic communication between UARTy and UARTz to realize the infrared 
+    decoding function of serial IrDA normal consumption mode.
+    First, UARTy sends TxBuffer1 data to UARTz, and UARTz receives data through interrupt and stores it in RxBuffer1.
+    Subsequently, compare the received data with the sent data, and the result of the comparison is stored in the 
+    TransferStatus variable.
+
+2. Development environment
+
+    Software development environment: KEIL MDK-ARM V5.34.0.0
+                                      IAR EWARM 8.50.1
+    Hardware development environment:
+            Developed based on the evaluation board N32G033K8Q7-1_STB V1.0
+
+3. How to use
+
+    The system clock configuration is as follows:
+    -System clock = 64MHz
+    
+    The UART configuration is as follows:
+    -Baud rate = 1200 baud
+    -Word length = 8 data bits
+    -1 stop bit
+    -Verification control disabled
+    -Receiver and transmitter enable
+    -16 times oversampling
+    
+    The UART pin connections are as follows:
+    - UART1_Tx.PA2    <------->   IrDA Transmitter
+    - UART2_Rx.PA0    <------->   IrDA Receiver
+    
+    - GPIO.PB4         <------->   38kHz carrier
+
+    
+    Test steps and phenomena:
+    - Reset and run the MCU, check the variable TransferStatus, where PASSED means the test passed and FAILED means the test is abnormal
+
+
+4. Attention
+

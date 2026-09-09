@@ -1,0 +1,65 @@
+﻿V1.2.0版本
+1.GPIO初始化函数增加输入+复用模式可配
+2.ComplementarySignals 的demo，修改BKIN引脚配置为输入+复用模式。
+
+V1.1.1版本
+1.新增IWDG_Freeze_Enable函数及相关宏定义
+2.更新TIM_CTRL1_TRGLDCNTEN宏定义
+3.更新TIM_BREAK_IOM1_POLARITY_INVERT宏定义为TIM_BREAK_IOM_COMP_POLARITY_INVERT，更新TIM_BREAK_IOM2_POLARITY_NONINVERT宏定义为TIM_BREAK_IOM_COMP_POLARITY_NONINVERT
+4.COMP_INPSEL_OPA0/1/2宏定义更新为COMP_INPSEL_OPAMP1/2/3
+5.增加OPAMP1_CS_VMSEL_PB2宏定义
+6.更新COMP_Init、COMP_SetRefScl函数
+7.更新RCC_ConfigIOFilter、RCC_ConfigTIM4Filter、RCC_ConfigTIM3Filter、RCC_ConfigLSICalibPeriod函数
+8.更新UART_Init函数
+9.更新UART_WAKEUP_DATACLR、UART_WAKEUP_DATANCLR宏定义值
+10. DMA FLASH_RAM demo优化
+
+V1.1.0版本
+1.更新RCC_ConfigTimClk，RCC_ConfigTim6Clk函数输入参数宏定义
+2.system.c文件中FLASH latency注释改为与sysclk相关
+3.FLASH驱动中编写FLASH和选项字节相关函数中，调用FLASH_WaitForLastOpt改为传入局部变量
+4.新增ADC_Temp demo
+5.新增FreeRTOS demo
+6.新增TimeBasic6_wakeup demo
+7.新增ClassB_demo应用例程
+8.RCC_EnableGlitchDetect函数新增使用注意点
+9.删除PWR_EnterSLEEPMode函数
+10.ADC_ConfigRegularchannel函数优化
+11.删除GPIO的输出开漏模式
+
+V1.0.0版本
+初始版本
+
+Version V1.2.0
+1.Added configurable options for Input + Alternate Function mode to the GPIO initialization function.
+2.Modified the BKIN pin configuration to Input + Alternate Function mode in the ComplementarySignals demo.
+
+Version V1.1.1
+1. Added IWDG_Sreeze_Snable function and related macro definitions
+2. Update the TIM_CTRL1_TRGLDCNTEN macro definition
+3. Update the TIM_BREAK_IOM1_POLYARITY_INVERT macro to be defined as TIM_BREAK_IOM_COMP_POLARITD_INVERT, and update the TIM_BREAK_IOM_2_POLARITY_NONINERT macro to be defined as TIM_BREAK_IOM_COMP_POLARITY_NONINERT
+4. COMP_INPSEL_OPA0/1/2 macro definition updated to COMP_INPSEL_OPAMP1/2/3
+5. Add OPAMP1_CS_VMSEL_PB2 macro definition
+6. Update COMP_init and COMP_SetRefScl functions
+7. Update RCC_ConfigIOFilter、RCC_ConfigTIM4Filter、RCC_ConfigTIM3Filter、RCC_ConfigLSICalibPeriod function
+8. Update the UARD_Init function
+9. Update the macro definition values of UARTianwAKEUP_DATACLR and UARTianwAKEUP_DATANCLR
+10. DMA FLASH_RAM demo optimization
+
+
+Version V1.1.0
+1. Update the macro definitions for the input parameters of RCC_Config TimClk and RCC_Config Tim6Clk functions
+Change the FLASH latency annotation in the system. c file to be related to sysclk
+3. In FLASH driver, write FLASH and option byte related functions, call FLASH_WaitForLastOpt to transfer in local variables
+4. Add ADC_Temp demo
+5. Add FreeRTOS demo
+6. Added TimeBasic6_wakeup demo
+7. Add ClassB_demo application routine
+8. RCC_EnableGlitchDetect function add use note
+9. Delete PWR_EnterSLEEPMode function
+10. Optimization of ADC_CnfigRegularchannel function
+11. Delete GPIO output open drain mode
+
+Version V1.0.0
+Initial version
+
